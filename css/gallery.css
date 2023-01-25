@@ -65,7 +65,7 @@ h1 {
      column-count:         3;
     }
  }
- /**/
+ /* For screens up to 800px, let’s reduce the columns to 2. */
  @media (max-width: 800px) {
     #fitgallery, #shoegallery, #baggallery {
      -moz-column-count:    2;
@@ -73,7 +73,7 @@ h1 {
      column-count:         2;
     }
  }
- /**/
+ /* For screens up to 400px, let’s reduce the columns to 1. */
  @media (max-width: 400px) {
     #gallery, #shoegallery, #baggallery {
      -moz-column-count:    1;

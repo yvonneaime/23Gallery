@@ -3,5 +3,23 @@ body {
 }
 h1 {
     text-align: center;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
 }
+/* List style */
+ul {
+    list-style-type: none;
+    text-decoration: none;
+}
+#links {
+    list-style-type: none; 
+}
+/* Link styles */
+#links a {
+    text-decoration: none;
+    color: rgb(46, 39, 39);
+}
+p{
+    text-align: center;  
+}
+/*#Links {
+}*/

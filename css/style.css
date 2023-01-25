@@ -1,25 +1,47 @@
 body {
     font-family: sans-serif;
 }
+.flex {
+    display: flex; 
+    gap: var(--gap, 1rem);
+}
+/* Nav bar and header style */
+#logo {
+    margin: 2rem;
+}
+.primary-header {
+    align-items: center;
+    justify-content: space-between;
+}
+.primary-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.primary-navigation a {
+    text-decoration: none;
+}
 h1 {
     text-align: center;
     letter-spacing: 0.1em;
 }
 /* List style */
 ul {
-    list-style-type: none;
     text-decoration: none;
 }
 #links {
     list-style-type: none; 
+    font-size: large;
+    line-height: 1.75;
 }
 /* Link styles */
 #links a {
     text-decoration: none;
     color: rgb(46, 39, 39);
 }
+#links:hover {
+    text-decoration: underline;
+}
 p{
     text-align: center;  
 }
-/*#Links {
-}*/

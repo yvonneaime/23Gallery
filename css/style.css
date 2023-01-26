@@ -10,20 +10,24 @@ body {
     margin: 2rem;
 }
 .primary-header {
-    align-items: center;
+    align-items: right;
     justify-content: space-between;
 }
 .primary-navigation {
     list-style: none;
-    padding: 0;
+    text-align: right;
+    padding: 5px;
     margin: 0;
 }
 .primary-navigation a {
     text-decoration: none;
+    text-align: right;
 }
 h1 {
     text-align: center;
+    font-size: 40px;
     letter-spacing: 0.1em;
+    padding: 18px;
 }
 /* List style */
 ul {
@@ -31,9 +35,10 @@ ul {
 }
 #links {
     list-style-type: none; 
-    font-size: large;
-    line-height: 1.75;
+    font-size: 20px;
+    line-height: 1.9;
 }
+
 /* Link styles */
 #links a {
     text-decoration: none;

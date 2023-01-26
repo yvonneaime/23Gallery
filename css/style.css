@@ -10,14 +10,17 @@ body {
     margin: 2rem;
 }
 .primary-header {
-    align-items: right;
-    justify-content: space-between;
+    justify-content: right;
+    display: flex;
+    padding: 15px;
+    right: 20px;
 }
 .primary-navigation {
     list-style: none;
     text-align: right;
     padding: 5px;
     margin: 0;
+    display: flex;
 }
 .primary-navigation a {
     text-decoration: none;

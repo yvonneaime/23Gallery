@@ -1,8 +1,4 @@
-/**
- *
- * startImageTransition will start the image transition process.
- *
- */
+/* startImageTransition will start the image transition process. */
 function startImageTransition() {
   var images = document.getElementsByClassName("fade");
 
@@ -13,13 +9,9 @@ function startImageTransition() {
   var top = 1;
   var cur = images.length - 1;
 
-  setInterval(changeImage, 1000);
+  setInterval(changeImage, 4000);
 
-  /**
-   *
-   * changeImage will select a new image given the index of images.
-   *
-   */
+  /* changeImage will select a new image given the index of images. */
   async function changeImage() {
     var nextImage = (1 + cur) % images.length;
     images[cur].style.zIndex = top + 1;
@@ -32,11 +24,7 @@ function startImageTransition() {
     images[nextImage].src = swapView(images[cur].src);
   }
 
-  /**
-   *
-   * swapView will swap the image using -av (alternate view).
-   *
-   */
+  /* swapView will swap the image using -av (alternate view). */
   function swapView(imageSource) {
     if (imageSource.includes("-av")) {
       return imageSource.replace("-av", "");
@@ -45,10 +33,7 @@ function startImageTransition() {
     }
   }
 
-  /**
-   * transition will swap the opacity of the image to showcase a 'flash' effect.
-   *
-   */
+  /* transition will swap the opacity of the image to showcase a 'flash' effect.*/
   function transition() {
     return new Promise(function (resolve, reject) {
       var del = 0.01;

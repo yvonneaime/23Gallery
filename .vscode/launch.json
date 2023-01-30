@@ -2,12 +2,12 @@
     "version": "0.2.0",
     "configurations": [
 
-    
         {
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",            
-            "file": "${workspaceRoot}/html/main.html"
+            "url": "http://127.0.0.1:3000/main.html",
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }

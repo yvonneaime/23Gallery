@@ -26,6 +26,9 @@ function startImageTransition() {
 
   /* swapView will swap the image using -av (alternate view). */
   function swapView(imageSource) {
+    var parser = document.createElement("a");
+    parser.href = imageSource;
+    console.log(parser.pathname);
     if (imageSource.includes("-av")) {
       return imageSource.replace("-av", "");
     } else {

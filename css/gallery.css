@@ -5,6 +5,15 @@ body {
 h1 {
     text-align: center;
 }
+.button {
+   padding: 8px;
+   margin-bottom: 10px;
+   z-index: 1;
+   background-color: rgb(248, 203, 248);
+   border-radius: 10px;
+   border-style: hidden;
+   border-color: rgb(248, 203, 248);
+}
 #fitgallery {
     line-height:0;
     -webkit-column-count:5; /* split it into 5 columns */

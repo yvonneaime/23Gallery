@@ -1,6 +1,6 @@
 /* startImageTransition will start the image transition process. */
-function startImageTransition() {
-  var images = document.getElementsByClassName("fade");
+function startImageTransition(className) {
+  var images = document.getElementsByClassName(className);
 
   for (var i = 0; i < images.length; ++i) {
     images[i].style.opacity = 1;
@@ -22,17 +22,35 @@ function startImageTransition() {
     top = top + 1;
     images[cur].style.opacity = 1;
     images[nextImage].src = swapView(images[cur].src);
+    cur = nextImage;
+  }
+
+  /**
+   * Parses a URL's path and returns it.
+   * sparam {*} url = String
+   */
+  function parseURLPath(url){
+    // https:// or http://
+    let delimiter = "";
+    if(url.includes("https")){
+      delimiter = "https://"
+    } else {
+      delimiter = "http://"
+    }
+
+    let urlSplitArray = url.split(delimiter)
+    if(urlSplitArray.length == 2){
+      return urlSplitArray[1].substring(urlSplitArray[1].indexOf('/')+1)
+    }
   }
 
   /* swapView will swap the image using -av (alternate view). */
   function swapView(imageSource) {
-    var parser = document.createElement("a");
-    parser.href = imageSource;
-    console.log(parser.pathname);
-    if (imageSource.includes("-av")) {
-      return imageSource.replace("-av", "");
+    let path = parseURLPath(imageSource);
+    if (path.includes("-av."))  {
+      return path.replace("-av.", ".");
     } else {
-      return imageSource.replace(".", "-av.");
+      return path.replace(".", "-av.");
     }
   }
 
@@ -53,4 +71,6 @@ function startImageTransition() {
     });
   }
 }
-startImageTransition();
+["pradafade", "kikifade"].forEach(className => 
+  startImageTransition(className)
+);

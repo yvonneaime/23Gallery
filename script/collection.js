@@ -49,6 +49,12 @@ function groupImages() {
             case "bella_hadid":
                 sendImage(key, images)
                 break;
+            case "blumarine":
+                sendImage(key, images)
+                break;
+            case "unknown_sources":
+                sendImage(key, images)
+                break;
         }
     }
 
